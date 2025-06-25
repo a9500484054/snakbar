@@ -1,0 +1,127 @@
+.menu {
+    background: linear-gradient(180deg, #026C9E 0%, #78CCC8 100%);
+    .container {
+
+    }
+    &__title {
+        font-family: $font-family--bryndan_writeregular;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 91%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+        span {
+            display: block;
+            text-wrap: nowrap;        
+        }
+        @media (min-width: $screen-table) {        
+            font-size: 32px;
+        }
+        @media (min-width: $screen-desktop) {
+            font-size: 56px;
+        }
+
+    }
+    &__list {
+        padding: 0 10px 46px;
+        @media (min-width: $screen-table) {        
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: 1fr 1fr;    
+            gap: 10px;                      
+        }
+        @media (min-width: $screen-desktop) {
+            grid-template-columns: 1fr 1fr 1fr 1fr; 
+            grid-template-rows: 1fr;  
+            gap: 50px;                      
+
+        }
+    }
+    &__item {
+        min-height: 169px;
+        background-color: #000;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
+        &:nth-child(1) {
+            background-image: url('/image/menu__item-1-mob.jpg');
+        }
+        &:nth-child(2) {
+            background-image: url('/image/menu__item-2-mob.jpg');
+        }
+        &:nth-child(3) {
+            background-image: url('/image/menu__item-3-mob.jpg');
+        }
+        &:nth-child(4) {
+            background-image: url('/image/menu__item-4-mob.jpg');
+        }
+        &:hover > .menu__card {
+            display: block;
+        }
+        @media (min-width: $screen-desktop) {
+            &:nth-child(1) {
+                background-image: url('/image/menu__item-1-dest.jpg');
+            }
+            &:nth-child(2) {
+                background-image: url('/image/menu__item-2-dest.jpg');
+            }
+            &:nth-child(3) {
+                background-image: url('/image/menu__item-3-dest.jpg');
+            }
+            &:nth-child(4) {
+                background-image: url('/image/menu__item-4-dest.jpg');
+            }
+            height: 728px;
+        }
+    }
+    &__card {
+        display: none;
+        background: #000000CC;
+        height: 100%;
+        width: 100%;
+        padding: 12px 18px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        &-title {
+            font-family: $font-family--Rubik;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 8px;
+            @media (min-width: $screen-table) {        
+                font-size: 14px;
+            }
+            @media (min-width: $screen-desktop) {
+                font-size: 16px;
+            }
+        }
+        &-text {
+            font-family: $font-family--Rubik;
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 6px;
+            @media (min-width: $screen-table) {        
+                font-size: 12px;
+            }
+            @media (min-width: $screen-desktop) {
+                font-size: 14px;
+            }
+
+        }
+
+    }
+}

@@ -1,0 +1,109 @@
+.hero {
+    background: linear-gradient(180deg, #D48C97 28.85%, #78CCC8 100%);
+    .container {
+        padding-top: 104px;
+        padding-bottom: 16px;
+        text-align: center;
+        @media (min-width: $screen-table) {
+            padding-top: 130px;
+        }
+        @media (min-width: $screen-desktop) {
+            padding-top: 150px;
+            padding-bottom: 36px;
+        }   
+    }
+    &__logo {
+        width: 120px;
+        height: 83px;
+        margin: 0 auto;
+        margin-bottom: 3px;
+        @media (min-width: $screen-table) {
+            width: 240px;
+            height: 166px;
+            margin-bottom: 11px;
+        }
+        @media (min-width: $screen-desktop) {
+            width: 366px;
+            height: 256px;
+        }
+        
+    }
+
+    &__title {
+        font-family: $font-family--bryndan_writeregular;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #fff;
+        text-shadow: 
+            -1px -1px 0 #712639,  
+            1px -1px 0 #712639,
+            -1px  1px 0 #712639,
+            1px  1px 0 #712639; /* Создаёт эффект обводки */
+        margin-bottom: 3px;
+        @media (min-width: $screen-table) {
+            font-size: 32px;
+        }
+        @media (min-width: $screen-desktop) {
+            font-size: 48px;
+            text-shadow: 
+                -2px -2px 0 #712639,  
+                2px -2px 0 #712639,
+                -2px  2px 0 #712639,
+                2px  2px 0 #712639; /* Создаёт эффект обводки */
+        }
+    }
+
+    &__packs {
+        margin-bottom: 12px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px;
+        @media (min-width: $screen-table) {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 576px;
+            margin: 0 auto;
+        }
+        @media (min-width:1120px) { 
+            max-width: 1120px;
+            
+        }
+    }  
+    &__item {
+        padding:6px;
+        background: linear-gradient(180deg, rgba(217, 217, 217, 0.68) 0%, rgba(212, 140, 151, 0.8) 100%);
+        box-shadow: 4px 4px 5px 0px #00000040;
+        margin-bottom: 5px;
+        border-radius: 25px;
+        color: #000;
+        @media (min-width: $screen-table) {
+            font-family: $font-family--Rubik;
+            font-weight: 500;
+            font-size: 22px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            height: 93px;
+            width: 270px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @media (min-width: $screen-desktop) { 
+
+        }
+        &:nth-child(2n) {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(212, 140, 151, 0.8) 100%);
+        }
+    }
+}
+
+
+

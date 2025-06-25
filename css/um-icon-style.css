@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?404ukh');
+  src:  url('../fonts/icomoon.woff?404ukh') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-viber:before {
+  content: "\e900";
+}
+.icon-watsapp:before {
+  content: "\e901";
+}
+.icon-call:before {
+  content: "\e902";
+}
+.icon-telegram:before {
+  content: "\ea95";
+}
+.icon-close:before {
+  content: "\e903";
+}

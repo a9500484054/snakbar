@@ -1,0 +1,72 @@
+.video {
+    background: linear-gradient(180deg, #E55F3B 0%, #026C9E 100%);
+    .container {
+        padding: 16px 15px;
+        text-align: center;
+        @media (min-width: $screen-table) {
+            padding: 80px 15px;
+        }
+        @media (min-width: $screen-desktop) {
+            padding: 132px 15px;
+        }
+    }
+    &__title {
+        font-family: $font-family--bryndan_writeregular;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #D48C97;
+        background: #FFFFFF;
+        border-radius: 77px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        padding: 14px 11px;
+        margin-bottom: 29px;
+        @media (min-width: $screen-table) {
+            font-size: 32px;
+        }
+        @media (min-width: $screen-desktop) {
+            font-size: 48px;
+        }
+        
+    }
+    &__wrapper {
+        // height: 149px;
+        width: 100%;
+        max-width: 930px;
+        max-height: 490px;
+        margin: 0 auto;
+        background-image: url('/image/video.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 4 / 2;
+        margin-bottom: 50px;
+    }
+    &__play {
+        display: flex;
+        width: 34px;
+        height: 34px;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        background-image: url('/image/play.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        @media (min-width: $screen-table) {
+            width: 60px;
+            height: 60px;
+        }
+        @media (min-width: $screen-desktop) {
+            width: 109px;
+            height: 109px;
+        }
+    }
+}

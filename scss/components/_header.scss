@@ -1,0 +1,136 @@
+.header {
+    min-height: 94px;
+    position: fixed;
+    width: 100vw;
+    z-index: 100;
+    background-image: url('./image/header-bg--mob.svg');
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    background-position: center;
+    @media (min-width: $screen-table) {
+        min-height: 244px;
+        background-image: url('./image/header-bg--dest.svg');
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px 0;
+    }
+    &__logo {
+        padding: 0;
+        margin: 0;
+        width: 30px;
+        height: 30px;
+        img {
+        }
+        @media (min-width: $screen-table) {
+            width: 60px;
+            height: 60px;
+        }
+        @media (min-width: $screen-desktop) {
+            width: 104px;
+            height: 104px;
+        }
+    }
+    &__menu {
+        
+        &-list {
+            display: flex;
+            align-items: center;
+        }
+        &-item {
+            margin: auto 1rem;
+        }
+        &-link {
+            font-family: $font-family--Rubik;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #000; 
+            @media (min-width: $screen-table) {
+                font-size: 16px;
+            }
+            @media (min-width: $screen-desktop) {
+                font-size: 22px;
+            }
+        }
+        &-btn {
+            font-family: $font-family--Rubik;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #000; 
+            padding: 2px 16px;
+            background-color: #D48C97;  
+            border-radius: 30px;
+            @media (min-width: $screen-table) {
+                font-size: 16px;
+                padding: 6px 20px;
+            }
+            @media (min-width: $screen-desktop) {
+                font-size: 22px;
+            }
+        }
+        &-adrees {
+            a {
+                font-family: $font-family--Rubik;
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 100%;
+                letter-spacing: 0%;
+                color: #000;
+                text-decoration: underline;
+                @media (min-width: $screen-table) {
+                    font-size: 16px;
+                }
+                @media (min-width: $screen-desktop) {
+                    font-size: 22px;
+                }
+            }
+            
+        }
+    }
+}
+
+
+.menu-burger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Выравнивание по правому краю */
+    justify-content: space-between;
+    width: 29px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    & span {
+        display: block;
+        height: 2px;
+        background: #000;
+        transition: all 0.3s ease;
+        border-radius: 50px;
+    }
+    
+    & span:nth-child(1) {
+        width: 100%;
+    }
+    
+    & span:nth-child(2) {
+        width: 70%; /* Средняя полоска короче */
+    }
+    
+    & span:nth-child(3) {
+        width: 100%;
+    }
+    
+    // /* Опционально: анимация при наведении */
+    // &:hover span:nth-child(2) {
+    //     width: 85%; /* Можно добавить небольшой эффект при наведении */
+    // }
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackBar - Любовь с первого куся</title>
+
+    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__container container">
+            <a href="index.html" class="header__logo">
+                <img src="./image/logo.svg" alt="">
+            </a>
+            <div class="header__menu">  
+                <ul class="header__menu-list">
+                    <li class="header__menu-item d-none-mob"><a class="header__menu-link" href="#section1">Меню Snack Bar</a></li>
+                    <li class="header__menu-item d-none-mob"><a class="header__menu-link" href="#section2">Ассортимент лакомств</a></li>
+                    <li class="header__menu-item">
+                        <a class="header__menu-btn" id="openModalBtn" href="#">Где купить</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__menu-adrees d-none-mob">
+                <a href="mailto:client@triol.pet">client@triol.pet</a>
+            </div>
+            <button type="button" class="menu-burger d-none-dest">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+   	<main>
+        <section class="hero" >
+            <div class="container">
+                <div class="hero__logo">
+                    <img src="./image/hero-logo.svg" alt="">
+                </div>
+                <h1 class="hero__title">Любовь с первого куся</h1>
+                <div class="hero__packs">
+                    <!-- <img src="./image/pack-mob.png" alt="Упакова корма"> -->
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="./image/pack-mob.png">
+                        <source media="(min-width: 768px)" srcset="./image/pack-dest.png">
+                        <img src="./image/pack-dest.png" alt="Упаковка корма">
+                    </picture>
+                </div>
+                <ul class="hero__list">
+                    <li class="hero__item">Высокое содержание мяса и рыбы</li>
+                    <li class="hero__item">Открытый состав</li>
+                    <li class="hero__item">Максимум пользыв каждом кусочке</li>
+                    <li class="hero__item">Четыре функциональных формата</li>
+                </ul>
+            </div>
+ 
+        </section>
+        <section class="chat">
+            <div class="container">
+                <ul class="chat__list triangle">
+                    <li class="chat__item">
+                        <div class="chat__message chat__message-client">
+                            <div class="msg-img">
+                                <img src="/image/avatar101.png" alt="">
+                            </div>
+                            <div class="msg-text">Правда много мяса и рыбы в составе? 😺</div>
+                        </div>
+                    </li>
+                    <li class="chat__item">
+                        <div class="chat__message chat__message-company">
+                            <div class="msg-text">Да-да! До 93%!  Полностью открытый состав, без секретов! 😺</div>
+                            <div class="msg-img">
+                                <img src="/image/avatar102.png" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="chat__item">
+                        <img src="/image/Loop.png" alt="">
+                    </li>
+                    <li class="chat__item">
+                        <div class="chat__message chat__message-client">
+                            <div class="msg-img">
+                                <img src="/image/avatar101.png" alt="">
+                            </div>
+                            <div class="msg-text">Не может быть! 😲 Тогда давайте посмотрим, что в меню.😸</div>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <div class="triangle"></div> -->
+                <div class="chat__loop">
+                    <img src="/image/Loop-dest.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="menu">
+            <div class="container">
+                <h2 class="menu__title">
+                    <span>Меню Snack Bar</span>
+                    <span>подбери свое идеальное угощение</span>
+                </h2>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <div class="menu__card">
+                            <h3 class="menu__card-title">Креветка и макрель</h3>
+                            <p class="menu__card-text">
+                                Богатые источники легкоусвояемого белка, необходимого для поддержания мышечной массы и активности кошек.
+                            </p>
+                            <p class="menu__card-text">
+                                Макрель в большом количестве содержит омега-3 жирные кислоты, полезные для кожи, шерсти и сердечно-сосудистой системы, а также витамины D и B12.
+                            </p>
+                            <p class="menu__card-text">
+                                Креветки же по праву считаются одним из лучших пищевых источников йода, который необходим для поддержания здоровья щитовидной железы. Также этот морепродукт богат натуральными антиоксидантами, включая астаксантин.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__card">
+                            <h3 class="menu__card-title">Тунец и лосось</h3>
+                            <p class="menu__card-text">
+                                Это не только изысканное лакомство, но и настоящий источник пользы, ведь не зря они занимают лидирующие места в рейтингах блюд для правильного питания.
+                            </p>
+                            <p class="menu__card-text">
+                                Лосось —натуральный источник полезных жиров, витаминов 
+                                А, D и Е. Они поддерживают здоровье кожи, шерсти и суставов, 
+                                а также укрепляют иммунную систему питомца
+                            </p>
+                            <p class="menu__card-text">
+                                Тунец - богат железом, витаминами группы B и магнием, необходимыми для нормального обмена веществ, правильной работы нервной системы, а также поддержания энергии 
+                                и активности кошки.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__card">
+                            <h3 class="menu__card-title">Курица</h3>
+                            <p class="menu__card-text">
+                               Источник ценнейших питательных веществ. Обладает нежным вкусом, легко усваивается и почти не содержит жира, обеспечивая питомца энергией без лишней нагрузки на организм.
+                            </p>
+                            <p class="menu__card-text">
+                                 Каждый кусочек этого вида птицы богат фосфором, железом 
+                                в легкоусвояемой форме, серой, селеном, кальцием, магнием 
+                                и медью. 
+                            </p>
+                            <p class="menu__card-text">
+                                Куриное мясо способствует улучшению пищеварения, нормализует выработку желудочного сока и помогает поддерживать здоровье желудочно-кишечного тракта.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__card">
+                            <h3 class="menu__card-title">Кролик</h3>
+                            <p class="menu__card-text">
+                                Нежное, гипоаллергенное мясо, идеально подходящее для сбалансированного питания. Оно отличается высоким содержанием легкоусвояемого белка, который обеспечивает энергией и поддерживает мышечную массу питомца.
+                            </p>
+                            <p class="menu__card-text">
+                                Этот продукт богат витаминами B 12, E и C, а также важными минералами – железом, фосфором, кальцием и натрием.
+                            </p>
+                            <p class="menu__card-text">
+                                Благодаря низкому содержанию жиров и холестерина крольчатина идеально подходит для ежедневного угощения кошек.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="pack">
+            <div class="container">
+                <div class="pack__list">
+                    <div class="pack__item pack__item-left">
+                        <div class="item-content">
+                            <h3 class="item-title">
+                                Когда нуждаешься в объятиях
+                            </h3>
+                            <p class="item-text">
+                                Крем-лакомство — <span>деликатное удовольствие для пушистых гурманов.</span>  
+                            </p>
+                            <P class="item-text">
+                                Его нежная текстура буквально тает на языке. Полезные добавки, такие как таурин и витаминно-минеральный комплекс, укрепляют здоровье костей, зубов и сердечно-сосудистой системы. 
+                            </P>
+                            <P class="item-text">
+                                А удобная порционная упаковка по 10 грамм позволяет с легкостью угостить питомца в любое время.
+                            </P>
+                            <div class="item-badge">
+                                70% мяса и рыбы в составе
+                            </div>
+                        </div>
+                        <div class="item-slider">
+                            <img src="/image/pack-item-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="pack__item pack__item-right">
+                        <div class="item-content">
+                            <h3 class="item-title">
+                                Когда хочется уюта и отдыха
+                            </h3>
+                            <p class="item-text">
+                                Сочетание нежной текстуры и пользы — вот что делает паштет SNACK BAR настоящей <span> находкой для заботливых хозяев.</span>
+                            </p>
+                            <P class="item-text">
+                               Внутри — комплекс аминокислот и натуральные антиоксиданты, которые поддерживают иммунитет.
+                            </P>
+                            <P class="item-text">
+                                А удобная порционная упаковка по 10 грамм позволяет с легкостью угостить питомца в любое время. 
+                            </P>
+                            <div class="item-badge">
+                                70% мяса и рыбы в составе
+                            </div>
+                        </div>
+                        <div class="item-slider">
+                            <img src="/image/pack-item-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="pack__item pack__item-left">
+                        <div class="item-content">
+                            <h3 class="item-title">
+                               Когда живешь на полной скорости
+                            </h3>
+                            <p class="item-text">
+                                Мини-роллы — <span>must-have для активных кошек.</span>
+                            </p>
+                            <P class="item-text">
+                                Они помогают сохранять бодрость, а их необычная форма стимулирует интерес к совместным играм. 
+                            </P>
+                            <P class="item-text">
+                                Удобная порционная упаковка по 10 грамм позволяет с легкостью угостить питомца в любое время.
+                            </P>
+                            <div class="item-badge">
+                                92,9% мяса и рыбы в составе
+                            </div>
+                        </div>
+                        <div class="item-slider">
+                            <img src="/image/pack-item-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="pack__item pack__item-right">
+                        <div class="item-content">
+                            <h3 class="item-title">
+                               Когда эмоции переполняют
+                            </h3>
+                            <p class="item-text">
+                                Приятно хрустящие подушечки с нежным кремом — <span>любимый вариант легкого перекуса.</span>
+                            </p>
+                            <p class="item-text">
+                                Сбалансированный состав не только поддерживает иммунную и нервную системы, но и улучшает состояние кожи и шерсти животного.
+                            </p>
+                            <div class="item-badge">
+                                40% мяса и рыбы в составе
+                            </div>
+                        </div>
+                        <div class="item-slider">
+                            <img src="/image/pack-item-1.png" alt="">
+                        </div>
+                        <div class="item-btn">
+                            <a href="#section3">Где купить</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video">
+            <div class="container">
+                <h2 class="video__title">Snack Bar – это любовь с первого куся</h2>
+                <div class="video__wrapper">
+                    <button class="video__play" type="button"></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cat">
+            <div class="container">
+                <div class="cat__content">
+                    <div class="cat__btn">
+                        <a href="#section3">Где купить</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</main>
+
+    <div class="menu-popup">
+        <div class="menu-popup__wrap">
+            <button  type="button" class="menu-popup__btn-close" >
+                    <i class="icon-close"></i>
+            </button> 
+            <ul>
+                <li class="menu-popup__item"><a class="menu-popup__link" href="#section1">Меню <span style="text-wrap: nowrap;">Snack Bar</span></a></li>
+                <li class="menu-popup__item"><a class="menu-popup__link" href="#section2">Ассортимент лакомств</a></li>
+                <li class="menu-popup__item"><a class="menu-popup__email" href="mailto:client@triol.pet">client@triol.pet</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>купить онлайн</h2>
+            <ul class="modal-list">
+                <li><a href="#"><img src="/image/ozon.svg" alt=""></a></li>
+                <li><a href="#"><img src="/image/wb.svg" alt=""></a></li>
+                <li><a href="#"><img src="/image/megamarket.svg" alt=""></a></li>
+                <li><a href="#"><img src="/image/yandexmarket.svg" alt=""></a></li>
+            </ul>
+            <p class="modal-text">найти в своем городе <span></span></p>
+            <div class="modal-social">
+                <h3>Наши соц.сети</h3>
+                <ul>
+                    <li><a href="#">
+                        <img src="/image/vk-logo.svg" alt="">
+                    </a></li>
+                    <li><a href="#">
+                        <img src="/image/telegram-logo.svg" alt="">
+                    </a></li>
+                </ul>
+            </div> 
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__logo" href="/index.html">
+                        <img src="/image/logo-footer.svg" alt="">
+                    </a>
+                </li>
+                <li class="footer__item">
+                    <ul class="footer__adress">
+                        <li class="footer__adress-text">ООО «АММА ПЕТ»</li>
+                        <li class="footer__adress-text">МО, г. Красногорск, ул. Успенская,</li>
+                        <li class="footer__adress-text">д. 5, пом. 15, оф. 607</li>
+                    </ul>
+                    <ul class="footer__contact">
+                        <li class="footer__contact-tel"><a href="tel:+749970503355">+7 (499) 705-03-55</a></li>
+                        <li class="footer__contact-mail"><a href="mailto:client@triol.pet">client@triol.pet</a></li>
+                    </ul>
+                </li>
+                <li class="footer__item">
+                    <ul class="footer__copyrite">
+                        <li class="footer__copyrite-text">Все права принадлежат компании “АММА ПЕТ”.</li>
+                        <li class="footer__copyrite-text">Производство и продажа товаров для домашних животных.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+
+		
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

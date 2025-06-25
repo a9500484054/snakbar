@@ -1,0 +1,84 @@
+.cat {
+    min-height: 490px;
+    background: linear-gradient(180deg, #026C9E 0%, #E55F3B 100%);
+    .container {
+        padding: 16px;
+        padding-bottom: 323px;
+        @media (min-width: $screen-table) {
+            // padding: 16px 0;
+            padding-bottom: 134px;
+        }
+        @media (min-width: 1200px) {
+            // padding: 16px 0;
+            padding-bottom: 99px;
+        }
+    }
+    &__content {
+        position: relative;
+        background-color: #78CCC8;
+        min-width: 292px;
+        min-height: 356px;
+        max-width: 350px;
+        margin: 0 auto;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        background-image: url('/image/cat.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 320px;
+        @media (min-width: $screen-table) {
+            max-width: 500px;
+        }
+        @media (min-width: $screen-desktop) {
+            max-width: 1200px;
+            min-height: 609px;
+            background-image: url('/image/cat-dest.png');
+            background-size: 90%;
+        }
+        @media (min-width: 1200px) {
+            min-height: 800px;
+        }
+    }
+    &__btn {
+        position: absolute;
+        bottom: 89px;
+        right: 8%;
+        a {
+            font-family: $font-family--Rubik;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            border-radius: 65px;
+            background-color: #D48C97;
+            box-shadow: -3px 2px 5.5px 0px #00000040;
+            padding: 10px 15px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        @media (min-width: $screen-table) {
+            a {
+                font-size: 24px;
+
+            }
+        }
+        @media (min-width: $screen-desktop) {
+            a {
+                font-size: 36px;
+                width: 379px;
+                height: 87px;
+            }
+        }  
+        @media (min-width: 1200px) {
+            a {
+                width: 479px;
+                position: relative;
+                bottom: 87px;
+            }
+        } 
+    }
+    
+}
