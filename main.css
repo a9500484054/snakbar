@@ -326,6 +326,7 @@ body {
   margin: 0 auto;
   background-color: #F0F0F0;
   position: relative;
+  transition: overflow 0.3s ease;
 }
 
 h1, h2, h3, h4, h5 {
@@ -942,6 +943,54 @@ input[type=radio].visually-hidden {
   .chat__loop {
     right: 4px;
   }
+}
+
+.chat__item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  margin-bottom: 15px;
+}
+
+.chat__item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chat__message {
+  animation: messageAppear 0.3s ease-out;
+}
+
+.chat__message-client {
+  margin-right: auto;
+}
+
+.chat__message-company {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+
+.msg-text {
+  align-self: center;
+}
+
+@keyframes messageAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.chat__loop {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.chat__loop.visible {
+  opacity: 1;
 }
 
 .menu {
