@@ -127,6 +127,7 @@
         .item-btn {
             align-items: center;
             margin: 50px auto;
+            z-index: 99;
             a {
                 display: flex;
                 justify-content: center;
@@ -144,6 +145,7 @@
                 letter-spacing: 0%;
                 vertical-align: middle;
                 color: #fff;
+                
             }
             @media (min-width: $screen-table) {
                 position: absolute;
@@ -236,6 +238,7 @@
                     position: absolute;
                     bottom: -3px;
                     right: -23px;
+                    z-index: 99;
                     @media (min-width: $screen-table) {
                         width: 146px;
                         height: 146px;
@@ -260,6 +263,7 @@
                     position: absolute;
                     bottom: 117px;
                     right: -11px;
+                    z-index: 99;
                     @media (min-width: $screen-table) {
                         bottom: 136px;
                     }
@@ -302,6 +306,7 @@
                     position: absolute;
                     bottom: -3px;
                     left: -23px;
+                    z-index: 99;
                     @media (min-width: $screen-table) {
                         width: 146px;
                         height: 146px;
@@ -326,6 +331,7 @@
                     position: absolute;
                     bottom: 117px;
                     right: -11px;
+                    z-index: 99;
                     @media (min-width: $screen-table) {
                         bottom: 136px;
                     }
@@ -368,6 +374,7 @@
                     position: absolute;
                     bottom: -3px;
                     right: -23px;
+                    z-index: 99;
                     @media (min-width: $screen-table) {
                         width: 146px;
                         height: 146px;
@@ -393,6 +400,7 @@
                     position: absolute;
                     bottom: 117px;
                     right: -11px;
+                    z-index: 99;
                     @media (min-width: $screen-table) {
                         bottom: 136px;
                     }
@@ -436,6 +444,7 @@
                     position: absolute;
                     bottom: -3px;
                     left: -23px;
+                    z-index: 99;
                     @media (min-width: $screen-table) {
                         width: 146px;
                         height: 146px;
@@ -460,6 +469,7 @@
                     position: absolute;
                     bottom: 117px;
                     right: -11px;
+                    z-index: 99;
                     @media (min-width: $screen-table) {
                         bottom: 136px;
                     }
@@ -473,15 +483,31 @@
         }
     }
 
-    &__swipe {
-        display: flex;
-        background-image: url('/image/Swipe.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        width: 33px;
-        height: 33px;
-        position: absolute;
-        bottom: 5px;
-    }
+
 }
+
+    .pack-swiper {
+        &::before {
+            content: "";
+            display: flex;
+            background-image: url('/image/Swipe.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 33px;
+            height: 33px;
+            position: absolute;
+            bottom: 5px;
+            z-index: 99;
+            left: 50%; // Добавлено
+            transform: translateX(-50%); // Добавлено   
+            @media (min-width: $screen-table) {
+                width: 44px;
+                height: 44px;
+            }
+            @media (min-width: $screen-desktop) {
+                width: 66px;
+                height: 66px;
+            }
+        }
+    }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SnackBar - Любовь с первого куся</title>
 
-    <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="main.css">
@@ -23,7 +23,7 @@
                     <li class="header__menu-item d-none-mob"><a class="header__menu-link" href="#section1">Меню Snack Bar</a></li>
                     <li class="header__menu-item d-none-mob"><a class="header__menu-link" href="#section2">Ассортимент лакомств</a></li>
                     <li class="header__menu-item">
-                        <a class="header__menu-btn" id="openModalBtn" href="#">Где купить</a>
+                        <a class="header__menu-btn openModalBtn btn--hover"  href="#">Где купить</a>
                     </li>
                 </ul>
             </div>
@@ -100,7 +100,7 @@
             </div>
         </section>
 
-        <section class="menu">
+        <section class="menu" id="section1">
             <div class="container">
                 <h2 class="menu__title">
                     <span>Меню Snack Bar</span>
@@ -114,10 +114,10 @@
                                 Богатые источники легкоусвояемого белка, необходимого для поддержания мышечной массы и активности кошек.
                             </p>
                             <p class="menu__card-text">
-                                Макрель в большом количестве содержит омега-3 жирные кислоты, полезные для кожи, шерсти и сердечно-сосудистой системы, а также витамины D и B12.
+                                <span>Макрель</span> в большом количестве содержит омега-3 жирные кислоты, полезные для кожи, шерсти и сердечно-сосудистой системы, а также витамины D и B12.
                             </p>
                             <p class="menu__card-text">
-                                Креветки же по праву считаются одним из лучших пищевых источников йода, который необходим для поддержания здоровья щитовидной железы. Также этот морепродукт богат натуральными антиоксидантами, включая астаксантин.
+                                <span>Креветки</span> же по праву считаются одним из лучших пищевых источников йода, который необходим для поддержания здоровья щитовидной железы. Также этот морепродукт богат натуральными антиоксидантами, включая астаксантин.
                             </p>
                         </div>
                     </li>
@@ -128,13 +128,10 @@
                                 Это не только изысканное лакомство, но и настоящий источник пользы, ведь не зря они занимают лидирующие места в рейтингах блюд для правильного питания.
                             </p>
                             <p class="menu__card-text">
-                                Лосось —натуральный источник полезных жиров, витаминов 
-                                А, D и Е. Они поддерживают здоровье кожи, шерсти и суставов, 
-                                а также укрепляют иммунную систему питомца
+                                <span>Лосось</span> — натуральный источник полезных жиров, витаминов А, D и Е. Они поддерживают здоровье кожи, шерсти и суставов, а также укрепляют иммунную систему питомца
                             </p>
                             <p class="menu__card-text">
-                                Тунец - богат железом, витаминами группы B и магнием, необходимыми для нормального обмена веществ, правильной работы нервной системы, а также поддержания энергии 
-                                и активности кошки.
+                                <span>Тунец</span> - богат железом, витаминами группы B и магнием, необходимыми для нормального обмена веществ, правильной работы нервной системы, а также поддержания энергии и активности кошки.
                             </p>
                         </div>
                     </li>
@@ -172,7 +169,7 @@
             </div>
         </section>
 
-        <section class="pack">
+        <section class="pack" id="section2">
             <div class="container">
                 <div class="pack__list">
                     <div class="pack__item pack__item-left">
@@ -194,7 +191,19 @@
                             </div>
                         </div>
                         <div class="item-slider">
-                            <img src="/image/pack-item-1.png" alt="">
+                            <div class="swiper pack-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-1-1.png" alt="фото упаковки">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-1-2.png" alt="фото упаковки">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-1-3.png" alt="фото упаковки">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="pack__item pack__item-right">
@@ -216,7 +225,19 @@
                             </div>
                         </div>
                         <div class="item-slider">
-                            <img src="/image/pack-item-1.png" alt="">
+                            <div class="swiper pack-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-2-1.png" alt="фото упаковки">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-2-2.png" alt="фото упаковки">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-2-3.png" alt="фото упаковки">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="pack__item pack__item-left">
@@ -238,7 +259,16 @@
                             </div>
                         </div>
                         <div class="item-slider">
-                            <img src="/image/pack-item-1.png" alt="">
+                            <div class="swiper pack-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-3-1.png" alt="фото упаковки">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-3-2.png" alt="фото упаковки">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="pack__item pack__item-right">
@@ -257,10 +287,19 @@
                             </div>
                         </div>
                         <div class="item-slider">
-                            <img src="/image/pack-item-1.png" alt="">
+                            <div class="swiper pack-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-4-1.png" alt="фото упаковки">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="/image/slid-4-2.png" alt="фото упаковки">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="item-btn">
-                            <a href="#section3">Где купить</a>
+                            <a href="#" class="openModalBtn btn--hover" >Где купить</a>
                         </div>
 
                     </div>
@@ -272,7 +311,11 @@
             <div class="container">
                 <h2 class="video__title">Snack Bar – это любовь с первого куся</h2>
                 <div class="video__wrapper">
-                    <button class="video__play" type="button"></button>
+                    <video width="100%" height="100%" controls>
+                        <source src="/video/snackbar.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает HTML5 видео.
+                    </video>
+                    <!-- <button class="video__play" type="button"></button> -->
                 </div>
             </div>
         </section>
@@ -281,7 +324,7 @@
             <div class="container">
                 <div class="cat__content">
                     <div class="cat__btn">
-                        <a href="#section3">Где купить</a>
+                        <a href="#" class="openModalBtn btn--hover">Где купить</a>
                     </div>
                 </div>
             </div>
@@ -326,6 +369,10 @@
         </div>
     </div>
 
+    <div class="loader">
+      <div class="loader-spinner"></div>
+      <div>Загрузка...</div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -357,9 +404,9 @@
     </footer>
     
 
-		
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>

@@ -50,6 +50,14 @@
             line-height: 100%;
             letter-spacing: 0%;
             color: #000; 
+            transition: all 0.3s;
+            &:hover {
+                color: #000000d3;
+            }
+            
+            &:active {
+                color: #00000094;
+            }
             @media (min-width: $screen-table) {
                 font-size: 16px;
             }
@@ -84,6 +92,14 @@
                 letter-spacing: 0%;
                 color: #000;
                 text-decoration: underline;
+                transition: all 0.3s;
+                &:hover {
+                    color: #000000d3;
+                }
+                
+                &:active {
+                    color: #00000094;
+                }
                 @media (min-width: $screen-table) {
                     font-size: 16px;
                 }

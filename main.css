@@ -316,6 +316,11 @@ template {
   outline: none;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px; /* Высота вашего хедера */
+}
+
 body {
   font-family: "Rubik", sans-serif;
   margin: 0 auto;
@@ -439,6 +444,13 @@ input[type=radio].visually-hidden {
   line-height: 100%;
   letter-spacing: 0%;
   color: #000;
+  transition: all 0.3s;
+}
+.header__menu-link:hover {
+  color: rgba(0, 0, 0, 0.8274509804);
+}
+.header__menu-link:active {
+  color: rgba(0, 0, 0, 0.5803921569);
 }
 @media (min-width: 768px) {
   .header__menu-link {
@@ -480,6 +492,13 @@ input[type=radio].visually-hidden {
   letter-spacing: 0%;
   color: #000;
   text-decoration: underline;
+  transition: all 0.3s;
+}
+.header__menu-adrees a:hover {
+  color: rgba(0, 0, 0, 0.8274509804);
+}
+.header__menu-adrees a:active {
+  color: rgba(0, 0, 0, 0.5803921569);
 }
 @media (min-width: 768px) {
   .header__menu-adrees a {
@@ -954,6 +973,7 @@ input[type=radio].visually-hidden {
 }
 .menu__list {
   padding: 0 10px 46px;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .menu__list {
@@ -965,9 +985,16 @@ input[type=radio].visually-hidden {
 }
 @media (min-width: 998px) {
   .menu__list {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+  }
+  .menu__list.expanded {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 50px;
+  }
+}
+@media (min-width: 998px) and (min-width: 998px) {
+  .menu__list.expanded {
+    gap: 30px;
   }
 }
 .menu__item {
@@ -978,7 +1005,6 @@ input[type=radio].visually-hidden {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow: hidden;
   position: relative;
 }
 .menu__item:nth-child(1) {
@@ -999,6 +1025,8 @@ input[type=radio].visually-hidden {
 @media (min-width: 998px) {
   .menu__item {
     height: 728px;
+    flex-basis: 25%;
+    transition: all 0.3s ease-in-out;
   }
   .menu__item:nth-child(1) {
     background-image: url("/image/menu__item-1-dest.jpg");
@@ -1011,6 +1039,38 @@ input[type=radio].visually-hidden {
   }
   .menu__item:nth-child(4) {
     background-image: url("/image/menu__item-4-dest.jpg");
+  }
+  .menu__item.expanded {
+    flex-basis: 50%;
+    height: 364px;
+    box-shadow: 5px 6px 5.8px 0px rgba(0, 0, 0, 0.2509803922);
+  }
+  .menu__item.expanded .menu__card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px;
+    background-color: transparent;
+    top: 100%;
+    align-items: flex-start;
+    text-align: left;
+    /* Анимация для появления карточки */
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  .menu__item.expanded .menu__card-title {
+    text-align: left;
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 2rem;
+  }
+  .menu__item.expanded .menu__card-text {
+    text-align: left;
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 1.5rem;
+  }
+  .menu__item.expanded .menu__card-text span {
+    font-weight: 700;
   }
 }
 .menu__card {
@@ -1064,6 +1124,16 @@ input[type=radio].visually-hidden {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .pack {
   background: linear-gradient(180deg, #78CCC8 0%, #E55F3B 100%);
 }
@@ -1185,6 +1255,7 @@ input[type=radio].visually-hidden {
 .pack__item .item-btn {
   align-items: center;
   margin: 50px auto;
+  z-index: 99;
 }
 .pack__item .item-btn a {
   display: flex;
@@ -1305,6 +1376,7 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: -3px;
   right: -23px;
+  z-index: 99;
 }
 @media (min-width: 768px) {
   .pack__item:nth-child(1) .item-slider::after {
@@ -1333,6 +1405,7 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: 117px;
   right: -11px;
+  z-index: 99;
 }
 @media (min-width: 768px) {
   .pack__item:nth-child(1) .item-slider::before {
@@ -1380,6 +1453,7 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: -3px;
   left: -23px;
+  z-index: 99;
 }
 @media (min-width: 768px) {
   .pack__item:nth-child(2) .item-slider::after {
@@ -1408,6 +1482,7 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: 117px;
   right: -11px;
+  z-index: 99;
 }
 @media (min-width: 768px) {
   .pack__item:nth-child(2) .item-slider::before {
@@ -1455,6 +1530,7 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: -3px;
   right: -23px;
+  z-index: 99;
 }
 @media (min-width: 768px) {
   .pack__item:nth-child(3) .item-slider::after {
@@ -1483,6 +1559,7 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: 117px;
   right: -11px;
+  z-index: 99;
 }
 @media (min-width: 768px) {
   .pack__item:nth-child(3) .item-slider::before {
@@ -1530,6 +1607,7 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: -3px;
   left: -23px;
+  z-index: 99;
 }
 @media (min-width: 768px) {
   .pack__item:nth-child(4) .item-slider::after {
@@ -1558,6 +1636,7 @@ input[type=radio].visually-hidden {
   position: absolute;
   bottom: 117px;
   right: -11px;
+  z-index: 99;
 }
 @media (min-width: 768px) {
   .pack__item:nth-child(4) .item-slider::before {
@@ -1571,7 +1650,9 @@ input[type=radio].visually-hidden {
     bottom: 196px;
   }
 }
-.pack__swipe {
+
+.pack-swiper::before {
+  content: "";
   display: flex;
   background-image: url("/image/Swipe.png");
   background-repeat: no-repeat;
@@ -1581,6 +1662,21 @@ input[type=radio].visually-hidden {
   height: 33px;
   position: absolute;
   bottom: 5px;
+  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  .pack-swiper::before {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (min-width: 998px) {
+  .pack-swiper::before {
+    width: 66px;
+    height: 66px;
+  }
 }
 
 .video {
@@ -2085,4 +2181,58 @@ input[type=radio].visually-hidden {
 
 .close:hover {
   color: black;
+}
+
+.btn--hover {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.btn--hover:hover {
+  background-color: #c96e7c;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.btn--hover:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255); /* Полупрозрачный белый фон */
+  background: linear-gradient(180deg, #D48C97 28.85%, #78CCC8 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  flex-direction: column;
+}
+
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db; /* Синий цвет */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Скрываем лоадер после загрузки */
+.loader.hidden {
+  opacity: 0;
+  pointer-events: none; /* Чтобы можно было кликать сквозь него */
 }/*# sourceMappingURL=main.css.map */

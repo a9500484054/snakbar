@@ -236,3 +236,60 @@
 .close:hover {
     color: black;
 }
+
+
+
+.btn--hover {
+    // ваши текущие стили
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    &:hover {
+        background-color: darken(#D48C97, 8%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    &:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+}
+
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255); /* Полупрозрачный белый фон */
+  background: linear-gradient(180deg, #D48C97 28.85%, #78CCC8 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  flex-direction: column;
+}
+
+.loader-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db; /* Синий цвет */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Скрываем лоадер после загрузки */
+.loader.hidden {
+  opacity: 0;
+  pointer-events: none; /* Чтобы можно было кликать сквозь него */
+}
