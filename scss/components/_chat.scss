@@ -9,28 +9,39 @@
         background-size: cover;
         padding-top: 75px;
         position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            background-image: url(/image/Loop.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 263px;
-            height: 328px;
-            display: block;
-            top: 0;
-            left: 50%;
-            transform: translate(-37%, -50%);
-            top: 414px;
-            @media (min-width: $screen-table) {
-                transform: translate(56%, -50%);
-            }
-        }
+        background-size: cover;
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     background-image: url(/image/Loop.png);
+        //     background-repeat: no-repeat;
+        //     background-size: cover;
+        //     width: 263px;
+        //     height: 328px;
+        //     display: block;
+        //     top: 0;
+        //     left: 50%;
+        //     transform: translate(-37%, -50%);
+        //     top: 414px;
+        //     @media (min-width: $screen-table) {
+        //         transform: translate(36%, -50%);
+        //     }
+        //     @media (min-width: 1200px) {
+        //         transform: translate(36%, -50%);
+        //         background-image: url(/image/Loop-dest.png);
+        //         width: 455px;
+        //         height: 557px;
+        //     }
+        // }
         @media (min-width: $screen-table) {
             padding-top: 216px;
+
+
         }
         @media (min-width: $screen-desktop) {
             padding-top: 216px;
+            background-size: contain;
         }
     }
     &__list {
@@ -60,7 +71,7 @@
             }
         }
         @media (min-width: $screen-desktop) {
-            max-width: 672px;
+            max-width: 565px;
             padding: 3rem;
             &::after {
                 left: 95px;
@@ -68,7 +79,7 @@
             
         }
         @media (min-width:1200px) {
-            max-width: 672px;
+            max-width: 600px;
             padding: 3rem;
             left: -198px;
         }
@@ -125,6 +136,7 @@
             .msg-img {
                 margin-top: 23px;
                 margin-left: 4px;
+
             }
             .msg-text {
                 border-top-left-radius: 10px;
@@ -169,51 +181,75 @@
                 max-width: 400px;
             }
             @media (min-width: $screen-desktop) {
-                font-size: 22px;                
+                font-size: 22px;
+                padding: 20px 16px;                
                 height: auto;
             }
         }
     }
-    &__loop {
-        display: none;
-         @media (min-width: $screen-table) {
-            display: flex;
-            position: absolute;
-            right: 40px;
-            top: 268px;
-            width: 50%;
+
+    &__packloop {
+        position: relative;
+        background-image: url(/image/Loop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 263px;
+            top: -215px;
+        height: 328px;
+        display: block;
+        
+        left: 50%;
+        transform: translate(-37%, -50%);
+        @media (min-width: $screen-table) {
+            top: 0;
+            transform: translate(36%, -100%);
         }
         @media (min-width: $screen-desktop) {
-            right: 4px;
+            transform: translate(45%, -106%);
+            width: 351px;
+            height: 419px;
+        }
+        @media (min-width: 1090px) {
+            transform: translate(60%, -106%);
+        }
+        @media (min-width: 1200px) {
+            transform: translate(34%, -83%);
+            background-image: url(/image/Loop-dest.png);
+            width: 455px;
+            height: 557px;
             
         }
     }
+    &__loop {
+        display: none;
+        z-index: 99;
+        
+         @media (min-width: $screen-table) {
+            display: flex;
+            position: absolute;
+            left: -45px;
+            top: 86px;
+            max-width: 294px;
+        }
+        @media (min-width: $screen-desktop) {
+            right: 4px;
+            display: flex;
+            position: absolute;
+            left: -44px;
+            top: 108px;
+            max-width: 350px;
+        }
+        @media (min-width: 1200px) {
+            right: 4px;
+            display: flex;
+            position: absolute;
+            left: -208px;
+            // top: 135px;
+            max-width: 650px;
+            top: 93px;
+        }
+    }
 }
-
-
-
-        // @media (min-width: $screen-table) {
-
-        // }
-        // @media (min-width: $screen-desktop) {
-
-        // }
-//         .triangle:after {
-//             position: absolute;
-//             bottom: 0;
-//             left: 0;
-//             display: block;
-//             width: 78px;
-//             height: 78px;   
-//             background-image: url('/image/chta-msg.svg');
-//             background-repeat: no-repeat;
-//             background-position: center;
-//         }
-// @media (min-width: $screen-table) {
-// }
-// @media (min-width: $screen-desktop) {
-
-// }
 
 
 
@@ -242,7 +278,7 @@
 .chat__message-company {
 
     margin-left: auto;
-    flex-direction: row-reverse;
+    // flex-direction: row-reverse;
 }
 
 .msg-img img {

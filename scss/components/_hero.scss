@@ -1,5 +1,7 @@
 .hero {
     background: linear-gradient(180deg, #D48C97 28.85%, #78CCC8 100%);
+    position: relative;
+    overflow: hidden;
     .container {
         padding-top: 104px;
         padding-bottom: 16px;
@@ -101,6 +103,21 @@
         }
         &:nth-child(2n) {
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(212, 140, 151, 0.8) 100%);
+        }
+    }
+    &__cat {
+        position: absolute;
+        top: 68px;
+        right: 0;
+        @media (min-width: $screen-table) {
+            max-width: 518px;
+            top: 68px;
+    
+        }
+        @media (min-width: $screen-desktop) {
+            max-width: none;
+            // width: 100%;
+
         }
     }
 }

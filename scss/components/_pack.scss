@@ -1,7 +1,23 @@
 .pack {
     background: linear-gradient(180deg, #78CCC8 0%, #E55F3B 100%);
     .container {
+        background-image: url('/image/line.svg');
+        background-repeat: no-repeat;
+        background-size: 100% 98%;
+        padding-top: 18px;
+        position: relative;
+        /* background-size: contain; */
+        padding-bottom: 125px;
+        @media (min-width: $screen-table) {
+            background-image: url('/image/line-dest.svg');
 
+        }
+        @media (min-width: $screen-desktop) {
+            background-size: 99% 99%;
+        }
+        @media (min-width: 1200px) {
+            background-size: 100% 94%;
+        }
     }
     &__list {
         padding-left: 20px;

@@ -326,5 +326,5 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(checkVisibility, 1000);
     });
     
-    document.querySelector('.container').appendChild(restartBtn);
+    // document.querySelector('.container').appendChild(restartBtn);
 });

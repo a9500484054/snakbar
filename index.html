@@ -46,13 +46,13 @@
                 </div>
                 <h1 class="hero__title">Любовь с первого куся</h1>
                 <div class="hero__packs">
-                    <!-- <img src="./image/pack-mob.png" alt="Упакова корма"> -->
                     <picture>
                         <source media="(max-width: 767px)" srcset="./image/pack-mob.png">
                         <source media="(min-width: 768px)" srcset="./image/pack-dest.png">
                         <img src="./image/pack-dest.png" alt="Упаковка корма">
                     </picture>
                 </div>
+
                 <ul class="hero__list">
                     <li class="hero__item">Высокое содержание мяса и рыбы</li>
                     <li class="hero__item">Открытый состав</li>
@@ -60,7 +60,13 @@
                     <li class="hero__item">Четыре функциональных формата</li>
                 </ul>
             </div>
- 
+            <div class="hero__cat">
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./image/img_cat-mob.png">
+                    <source media="(min-width: 768px)" srcset="./image/img_cat-dest.png">
+                    <img src="./image/img_cat-dest.png" alt="Кот">
+                </picture>
+            </div>
         </section>
         <section class="chat">
             <div class="container">
@@ -76,7 +82,7 @@
                     <li class="chat__item">
                         <div class="chat__message chat__message-company">
                             <div class="msg-text">Да-да! До 93%!  Полностью открытый состав, без секретов! 😺</div>
-                            <div class="msg-img">
+                            <div class="msg-img" style="order: 2">
                                 <img src="/image/avatar102.png" alt="">
                             </div>
                         </div>
@@ -94,9 +100,11 @@
                     </li>
                 </ul>
                 <!-- <div class="triangle"></div> -->
-                <div class="chat__loop">
-                    <img src="/image/Loop-dest-2.png" alt="">
-                </div>
+                 <div class="chat__packloop">
+                     <div class="chat__loop">
+                         <img src="/image/Loop-dest-2.png" alt="">
+                     </div>
+                 </div>
             </div>
         </section>
 
