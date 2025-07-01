@@ -777,6 +777,25 @@ input[type=radio].visually-hidden {
   padding-top: 75px;
   position: relative;
 }
+.chat .container::after {
+  content: "";
+  position: absolute;
+  background-image: url(/image/Loop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 263px;
+  height: 328px;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translate(-37%, -50%);
+  top: 414px;
+}
+@media (min-width: 768px) {
+  .chat .container::after {
+    transform: translate(56%, -50%);
+  }
+}
 @media (min-width: 768px) {
   .chat .container {
     padding-top: 216px;

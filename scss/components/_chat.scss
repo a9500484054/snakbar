@@ -9,6 +9,23 @@
         background-size: cover;
         padding-top: 75px;
         position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            background-image: url(/image/Loop.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 263px;
+            height: 328px;
+            display: block;
+            top: 0;
+            left: 50%;
+            transform: translate(-37%, -50%);
+            top: 414px;
+            @media (min-width: $screen-table) {
+                transform: translate(56%, -50%);
+            }
+        }
         @media (min-width: $screen-table) {
             padding-top: 216px;
         }
@@ -168,6 +185,7 @@
         }
         @media (min-width: $screen-desktop) {
             right: 4px;
+            
         }
     }
 }
