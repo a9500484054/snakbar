@@ -22,7 +22,7 @@
         margin: 0 auto;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
-        background-image: url('/image/cat.png');
+        background-image: url('./image/cat.png');
         background-repeat: no-repeat;
         background-position: center;
         background-size: 320px;
@@ -32,7 +32,7 @@
         @media (min-width: $screen-desktop) {
             max-width: 1200px;
             min-height: 609px;
-            background-image: url('/image/cat-dest.png');
+            background-image: url('./image/cat-dest.png');
             background-size: 90%;
         }
         @media (min-width: 1200px) {

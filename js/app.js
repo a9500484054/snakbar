@@ -180,8 +180,10 @@ document.addEventListener('DOMContentLoaded', function() {
         );
 
         if (isVisible) {
-            showMessages();
-            window.removeEventListener('scroll', checkVisibility);
+            setTimeout(()=> {
+                showMessages();
+                window.removeEventListener('scroll', checkVisibility);
+            }, 1000)
         }
     }
 
@@ -190,26 +192,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Проверить сразу при загрузке (если блок уже в зоне видимости)
     checkVisibility();
-
-    // Для демонстрации можно добавить кнопку перезапуска
-    const restartBtn = document.createElement('button');
-    restartBtn.textContent = 'Повторить переписку';
-    restartBtn.style.marginTop = '20px';
-    restartBtn.style.padding = '10px 20px';
-    restartBtn.style.backgroundColor = '#4CAF50';
-    restartBtn.style.color = 'white';
-    restartBtn.style.border = 'none';
-    restartBtn.style.borderRadius = '5px';
-    restartBtn.style.cursor = 'pointer';
-    
-    restartBtn.addEventListener('click', function() {
-        animationStarted = false;
-        chatItems.forEach(item => item.classList.remove('visible'));
-        chatLoop.classList.remove('visible');
-        // Прокрутить к блоку и запустить анимацию
-        chatSection.scrollIntoView({ behavior: 'smooth' });
-        setTimeout(checkVisibility, 1000);
-    });
-    
-    // document.querySelector('.container').appendChild(restartBtn);
 });

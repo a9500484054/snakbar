@@ -60,16 +60,16 @@
         background-position: center;
         position: relative;
         &:nth-child(1) {
-            background-image: url('/image/menu__item-1-mob.jpg');
+            background-image: url('./image/menu__item-1-mob.jpg');
         }
         &:nth-child(2) {
-            background-image: url('/image/menu__item-2-mob.jpg');
+            background-image: url('./image/menu__item-2-mob.jpg');
         }
         &:nth-child(3) {
-            background-image: url('/image/menu__item-3-mob.jpg');
+            background-image: url('./image/menu__item-3-mob.jpg');
         }
         &:nth-child(4) {
-            background-image: url('/image/menu__item-4-mob.jpg');
+            background-image: url('./image/menu__item-4-mob.jpg');
         }
         &:hover > .menu__card {
             display: block;
@@ -77,16 +77,16 @@
         }
         @media (min-width: $screen-desktop) {
             &:nth-child(1) {
-                background-image: url('/image/menu__item-1-dest.jpg');
+                background-image: url('./image/menu__item-1-dest.jpg');
             }
             &:nth-child(2) {
-                background-image: url('/image/menu__item-2-dest.jpg');
+                background-image: url('./image/menu__item-2-dest.jpg');
             }
             &:nth-child(3) {
-                background-image: url('/image/menu__item-3-dest.jpg');
+                background-image: url('./image/menu__item-3-dest.jpg');
             }
             &:nth-child(4) {
-                background-image: url('/image/menu__item-4-dest.jpg');
+                background-image: url('./image/menu__item-4-dest.jpg');
             }
             height: 728px;
             flex-basis: 25%;

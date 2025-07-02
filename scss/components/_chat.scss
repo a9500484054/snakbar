@@ -4,7 +4,7 @@
     
     .container {
         height: 100%;
-        background-image: url('/image/chat.png');
+        background-image: url('./image/chat.png');
         background-repeat: no-repeat;
         background-size: cover;
         padding-top: 75px;
@@ -14,7 +14,7 @@
         // &::after {
         //     content: "";
         //     position: absolute;
-        //     background-image: url(/image/Loop.png);
+        //     background-image: url(./image/Loop.png);
         //     background-repeat: no-repeat;
         //     background-size: cover;
         //     width: 263px;
@@ -29,7 +29,7 @@
         //     }
         //     @media (min-width: 1200px) {
         //         transform: translate(36%, -50%);
-        //         background-image: url(/image/Loop-dest.png);
+        //         background-image: url(./image/Loop-dest.png);
         //         width: 455px;
         //         height: 557px;
         //     }
@@ -65,7 +65,7 @@
                 display: block;
                 width: 78px;
                 height: 78px; 
-                background-image: url('/image/chta-msg.svg');
+                background-image: url('./image/chta-msg.svg');
                 background-repeat: no-repeat;
                 background-position: center;
             }
@@ -192,7 +192,7 @@
 
     &__packloop {
         position: relative;
-        background-image: url(/image/Loop.png);
+        background-image: url(./image/Loop.png);
         background-repeat: no-repeat;
         background-size: cover;
         width: 263px;
@@ -216,7 +216,7 @@
         }
         @media (min-width: 1200px) {
             transform: translate(34%, -83%);
-            background-image: url(/image/Loop-dest.png);
+            background-image: url(./image/Loop-dest.png);
             width: 455px;
             height: 557px;
             

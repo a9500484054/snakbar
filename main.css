@@ -789,7 +789,7 @@ input[type=radio].visually-hidden {
 }
 .chat .container {
   height: 100%;
-  background-image: url("/image/chat.png");
+  background-image: url("./image/chat.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 75px;
@@ -831,7 +831,7 @@ input[type=radio].visually-hidden {
     display: block;
     width: 78px;
     height: 78px;
-    background-image: url("/image/chta-msg.svg");
+    background-image: url("./image/chta-msg.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -952,7 +952,7 @@ input[type=radio].visually-hidden {
 }
 .chat__packloop {
   position: relative;
-  background-image: url(/image/Loop.png);
+  background-image: url(./image/Loop.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 263px;
@@ -983,7 +983,7 @@ input[type=radio].visually-hidden {
 @media (min-width: 1200px) {
   .chat__packloop {
     transform: translate(34%, -83%);
-    background-image: url(/image/Loop-dest.png);
+    background-image: url(./image/Loop-dest.png);
     width: 455px;
     height: 557px;
   }
@@ -1133,16 +1133,16 @@ input[type=radio].visually-hidden {
   position: relative;
 }
 .menu__item:nth-child(1) {
-  background-image: url("/image/menu__item-1-mob.jpg");
+  background-image: url("./image/menu__item-1-mob.jpg");
 }
 .menu__item:nth-child(2) {
-  background-image: url("/image/menu__item-2-mob.jpg");
+  background-image: url("./image/menu__item-2-mob.jpg");
 }
 .menu__item:nth-child(3) {
-  background-image: url("/image/menu__item-3-mob.jpg");
+  background-image: url("./image/menu__item-3-mob.jpg");
 }
 .menu__item:nth-child(4) {
-  background-image: url("/image/menu__item-4-mob.jpg");
+  background-image: url("./image/menu__item-4-mob.jpg");
 }
 .menu__item:hover > .menu__card {
   display: block;
@@ -1155,16 +1155,16 @@ input[type=radio].visually-hidden {
     transition: all 0.3s ease-in-out;
   }
   .menu__item:nth-child(1) {
-    background-image: url("/image/menu__item-1-dest.jpg");
+    background-image: url("./image/menu__item-1-dest.jpg");
   }
   .menu__item:nth-child(2) {
-    background-image: url("/image/menu__item-2-dest.jpg");
+    background-image: url("./image/menu__item-2-dest.jpg");
   }
   .menu__item:nth-child(3) {
-    background-image: url("/image/menu__item-3-dest.jpg");
+    background-image: url("./image/menu__item-3-dest.jpg");
   }
   .menu__item:nth-child(4) {
-    background-image: url("/image/menu__item-4-dest.jpg");
+    background-image: url("./image/menu__item-4-dest.jpg");
   }
   .menu__item.expanded {
     flex-basis: 50%;
@@ -1264,7 +1264,7 @@ input[type=radio].visually-hidden {
   background: linear-gradient(180deg, #78CCC8 0%, #E55F3B 100%);
 }
 .pack .container {
-  background-image: url("/image/line.svg");
+  background-image: url("./image/line.svg");
   background-repeat: no-repeat;
   background-size: 100% 98%;
   padding-top: 18px;
@@ -1274,7 +1274,7 @@ input[type=radio].visually-hidden {
 }
 @media (min-width: 768px) {
   .pack .container {
-    background-image: url("/image/line-dest.svg");
+    background-image: url("./image/line-dest.svg");
   }
 }
 @media (min-width: 998px) {
@@ -1517,7 +1517,7 @@ input[type=radio].visually-hidden {
 }
 .pack__item:nth-child(1) .item-slider::after {
   content: "";
-  background-image: url("/image/pack__elem-1-1.png");
+  background-image: url("./image/pack__elem-1-1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1546,7 +1546,7 @@ input[type=radio].visually-hidden {
 }
 .pack__item:nth-child(1) .item-slider::before {
   content: "";
-  background-image: url("/image/pack__elem-1-2.png");
+  background-image: url("./image/pack__elem-1-2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1594,7 +1594,7 @@ input[type=radio].visually-hidden {
 }
 .pack__item:nth-child(2) .item-slider::after {
   content: "";
-  background-image: url("/image/pack__elem-2-1.png");
+  background-image: url("./image/pack__elem-2-1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1623,7 +1623,7 @@ input[type=radio].visually-hidden {
 }
 .pack__item:nth-child(2) .item-slider::before {
   content: "";
-  background-image: url("/image/pack__elem-2-2.png");
+  background-image: url("./image/pack__elem-2-2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1671,7 +1671,7 @@ input[type=radio].visually-hidden {
 }
 .pack__item:nth-child(3) .item-slider::after {
   content: "";
-  background-image: url("/image/pack__elem-3-1.png");
+  background-image: url("./image/pack__elem-3-1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1700,7 +1700,7 @@ input[type=radio].visually-hidden {
 }
 .pack__item:nth-child(3) .item-slider::before {
   content: "";
-  background-image: url("/image/pack__elem-3-2.png");
+  background-image: url("./image/pack__elem-3-2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1748,7 +1748,7 @@ input[type=radio].visually-hidden {
 }
 .pack__item:nth-child(4) .item-slider::after {
   content: "";
-  background-image: url("/image/pack__elem-4-1.png");
+  background-image: url("./image/pack__elem-4-1.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1777,7 +1777,7 @@ input[type=radio].visually-hidden {
 }
 .pack__item:nth-child(4) .item-slider::before {
   content: "";
-  background-image: url("/image/pack__elem-4-2.png");
+  background-image: url("./image/pack__elem-4-2.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1804,7 +1804,7 @@ input[type=radio].visually-hidden {
 .pack-swiper::before {
   content: "";
   display: flex;
-  background-image: url("/image/Swipe.png");
+  background-image: url("./image/Swipe.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1877,7 +1877,7 @@ input[type=radio].visually-hidden {
   max-width: 930px;
   max-height: 490px;
   margin: 0 auto;
-  background-image: url("/image/video.jpg");
+  background-image: url("./image/video.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1894,7 +1894,7 @@ input[type=radio].visually-hidden {
   height: 34px;
   background-color: #FFFFFF;
   border-radius: 50%;
-  background-image: url("/image/play.svg");
+  background-image: url("./image/play.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;
@@ -1939,7 +1939,7 @@ input[type=radio].visually-hidden {
   margin: 0 auto;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  background-image: url("/image/cat.png");
+  background-image: url("./image/cat.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 320px;
@@ -1953,7 +1953,7 @@ input[type=radio].visually-hidden {
   .cat__content {
     max-width: 1200px;
     min-height: 609px;
-    background-image: url("/image/cat-dest.png");
+    background-image: url("./image/cat-dest.png");
     background-size: 90%;
   }
 }
@@ -2167,7 +2167,7 @@ input[type=radio].visually-hidden {
   display: block;
   width: 180px;
   height: 239px;
-  background-image: url("/image/cat-popup.png");
+  background-image: url("./image/cat-popup.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2177,7 +2177,7 @@ input[type=radio].visually-hidden {
 }
 @media (min-width: 998px) {
   .modal-content::after {
-    background-image: url("/image/cat-popup-dest.png");
+    background-image: url("./image/cat-popup-dest.png");
     width: 424px;
     height: 511px;
   }
@@ -2255,7 +2255,7 @@ input[type=radio].visually-hidden {
   display: inline-block;
   width: 22px;
   height: 22px;
-  background-image: url("/image/Location.svg");
+  background-image: url("./image/Location.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

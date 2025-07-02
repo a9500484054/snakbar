@@ -1,7 +1,7 @@
 .pack {
     background: linear-gradient(180deg, #78CCC8 0%, #E55F3B 100%);
     .container {
-        background-image: url('/image/line.svg');
+        background-image: url('./image/line.svg');
         background-repeat: no-repeat;
         background-size: 100% 98%;
         padding-top: 18px;
@@ -9,7 +9,7 @@
         /* background-size: contain; */
         padding-bottom: 125px;
         @media (min-width: $screen-table) {
-            background-image: url('/image/line-dest.svg');
+            background-image: url('./image/line-dest.svg');
 
         }
         @media (min-width: $screen-desktop) {
@@ -245,7 +245,7 @@
                 position: relative;
                 &::after {
                     content: '';
-                    background-image: url('/image/pack__elem-1-1.png');
+                    background-image: url('./image/pack__elem-1-1.png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -270,7 +270,7 @@
                 }
                 &::before {
                     content: '';
-                    background-image: url('/image/pack__elem-1-2.png');
+                    background-image: url('./image/pack__elem-1-2.png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -313,7 +313,7 @@
                 position: relative;
                 &::after {
                     content: '';
-                    background-image: url('/image/pack__elem-2-1.png');
+                    background-image: url('./image/pack__elem-2-1.png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -338,7 +338,7 @@
                 }
                 &::before {
                     content: '';
-                    background-image: url('/image/pack__elem-2-2.png');
+                    background-image: url('./image/pack__elem-2-2.png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -381,7 +381,7 @@
                 position: relative;
                 &::after {
                     content: '';
-                    background-image: url('/image/pack__elem-3-1.png');
+                    background-image: url('./image/pack__elem-3-1.png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -407,7 +407,7 @@
                 }
                 &::before {
                     content: '';
-                    background-image: url('/image/pack__elem-3-2.png');
+                    background-image: url('./image/pack__elem-3-2.png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -451,7 +451,7 @@
                 position: relative;
                 &::after {
                     content: '';
-                    background-image: url('/image/pack__elem-4-1.png');
+                    background-image: url('./image/pack__elem-4-1.png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -476,7 +476,7 @@
                 }
                 &::before {
                     content: '';
-                    background-image: url('/image/pack__elem-4-2.png');
+                    background-image: url('./image/pack__elem-4-2.png');
                     background-repeat: no-repeat;
                     background-position: center;
                     background-size: cover;
@@ -506,7 +506,7 @@
         &::before {
             content: "";
             display: flex;
-            background-image: url('/image/Swipe.png');
+            background-image: url('./image/Swipe.png');
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
