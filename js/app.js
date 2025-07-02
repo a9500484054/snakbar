@@ -69,17 +69,54 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-const heroSwipers = document.querySelectorAll('.pack-swiper').forEach(swiper => {
-    new Swiper(swiper, {
-        speed: 1000,
-        loop: true, // Добавьте этот параметр для бесконечной прокрутки
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
+// const heroSwipers = document.querySelectorAll('.pack-swiper').forEach(swiper => {
+//     new Swiper(swiper, {
+//         speed: 1000,
+//         loop: true, // Добавьте этот параметр для бесконечной прокрутки
+//         autoplay: {
+//             delay: 3000,
+//             disableOnInteraction: false,
+//         },
+//     });
+// });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Функция для инициализации Swiper
+    function initSwiper(element) {
+        return new Swiper(element, {
+            speed: 1000,
+            loop: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+        });
+    }
+
+    // Настройки для Intersection Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.7 // Слайдер инициализируется когда 10% его площади видно
+    };
+
+    // Создаем Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const swiperElement = entry.target;
+                initSwiper(swiperElement);
+                observer.unobserve(swiperElement); // Прекращаем наблюдение после инициализации
+            }
+        });
+    }, observerOptions);
+
+    // Находим все элементы слайдеров и начинаем наблюдать за ними
+    document.querySelectorAll('.pack-swiper').forEach(swiper => {
+        observer.observe(swiper);
     });
 });
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuItems = document.querySelectorAll('.menu__item');
@@ -158,14 +195,21 @@ document.addEventListener('DOMContentLoaded', function() {
         chatItems.forEach((item, index) => {
             setTimeout(() => {
                 item.classList.add('visible');
-                
+                const text = item.querySelector('.msg-text')
+                const typingIndicator = item.querySelector('.typing-indicator')
                 // Показываем индикатор набора перед последним сообщением
                 if (index === chatItems.length - 2) {
                     setTimeout(() => {
                         chatLoop.classList.add('visible');
-                    }, 500);
+                    }, 0);
                 }
-            }, index * 2000);
+                if(text) {
+                    setTimeout(() => {
+                        text.style.display = 'flex'
+                        typingIndicator.style.display = 'none'
+                    }, 1000)
+                }
+            }, index * 1500);
         });
     }
 
@@ -193,3 +237,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Проверить сразу при загрузке (если блок уже в зоне видимости)
     checkVisibility();
 });
+
+

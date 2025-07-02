@@ -60,6 +60,19 @@
 
     &__packs {
         margin-bottom: 12px;
+        width: 100%;
+        @media (min-width: $screen-table) {
+            position: relative;
+            left: 50%;
+            transform: translate(-47%, 0);
+            width: 115%;
+        }
+        @media (min-width: $screen-desktop) {
+            width: 125%;
+        }
+        @media (min-width:1200px) { 
+            width: 128%;
+        }
     }
 
     &__list {
@@ -111,7 +124,7 @@
         right: 0;
         @media (min-width: $screen-table) {
             max-width: 518px;
-            top: 68px;
+            top: 100px;
     
         }
         @media (min-width: $screen-desktop) {

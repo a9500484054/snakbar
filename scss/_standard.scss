@@ -135,6 +135,10 @@
     text-transform: uppercase;
     color: #fff;
     margin-bottom: 119px;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
     @media (min-width: $screen-desktop) {
         color: #fff;
         background: #026C9E;
@@ -159,7 +163,10 @@
         background-position: center;
         background-size: cover; 
         position: relative;
-        top: 6px
+        top: 6px;
+        @media (min-width: $screen-desktop) {
+            top: 2px;
+        }
     }
 
 }

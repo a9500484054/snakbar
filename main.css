@@ -720,6 +720,25 @@ input[type=radio].visually-hidden {
 }
 .hero__packs {
   margin-bottom: 12px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero__packs {
+    position: relative;
+    left: 50%;
+    transform: translate(-47%, 0);
+    width: 115%;
+  }
+}
+@media (min-width: 998px) {
+  .hero__packs {
+    width: 125%;
+  }
+}
+@media (min-width: 1200px) {
+  .hero__packs {
+    width: 128%;
+  }
 }
 .hero__list {
   display: flex;
@@ -774,7 +793,7 @@ input[type=radio].visually-hidden {
 @media (min-width: 768px) {
   .hero__cat {
     max-width: 518px;
-    top: 68px;
+    top: 100px;
   }
 }
 @media (min-width: 998px) {
@@ -898,6 +917,9 @@ input[type=radio].visually-hidden {
   background: #E6E6E6;
   color: #000000;
 }
+.chat__message-company {
+  justify-content: flex-end;
+}
 .chat__message-company .msg-img {
   margin-top: 23px;
   margin-left: 4px;
@@ -937,6 +959,7 @@ input[type=radio].visually-hidden {
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0%;
+  display: none;
 }
 @media (min-width: 768px) {
   .chat__message .msg-text {
@@ -1069,6 +1092,54 @@ input[type=radio].visually-hidden {
   opacity: 1;
 }
 
+/* Стили для индикатора печатания */
+.typing-indicator {
+  margin-top: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  background: #f1f1f1;
+  border-radius: 18px;
+}
+@media (min-width: 998px) {
+  .typing-indicator {
+    margin-top: 57px;
+  }
+}
+
+.typing-indicator span {
+  width: 6px;
+  height: 6px;
+  margin: 0 2px;
+  background-color: #666;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.4;
+}
+
+.typing-indicator span:nth-child(1) {
+  animation: typing-blink 1.4s infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation: typing-blink 1.4s infinite 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+  animation: typing-blink 1.4s infinite 0.4s;
+}
+
+@keyframes typing-blink {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
 .menu {
   background: linear-gradient(180deg, #026C9E 0%, #78CCC8 100%);
 }
@@ -2235,6 +2306,10 @@ input[type=radio].visually-hidden {
   color: #fff;
   margin-bottom: 119px;
 }
+.modal-text a {
+  color: #fff;
+  text-decoration: none;
+}
 @media (min-width: 998px) {
   .modal-text {
     color: #fff;
@@ -2261,6 +2336,11 @@ input[type=radio].visually-hidden {
   background-size: cover;
   position: relative;
   top: 6px;
+}
+@media (min-width: 998px) {
+  .modal-text span {
+    top: 2px;
+  }
 }
 
 .modal-social h3 {

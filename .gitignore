@@ -1,0 +1,5 @@
+# Игнорировать архив snakbar.rar
+snakbar.rar
+
+# Игнорировать видеофайл snackbar.mp4 в папке video
+video/snackbar.mp4
