@@ -181,12 +181,87 @@ window.addEventListener('load', function() {
 
 
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     const chatSection = document.querySelector('.chat');
+//     const chatItems = document.querySelectorAll('.chat__item');
+//     const chatLoop = document.querySelector('.chat__loop');
+//     let animationStarted = false;
+//     let scrollLocked = false;
+
+//     // Функция для показа сообщений
+//     function showMessages() {
+//         if (animationStarted) return;
+//         animationStarted = true;
+//         chatItems.forEach((item, index) => {
+//             setTimeout(() => {
+//                 item.classList.add('visible');
+//                 const text = item.querySelector('.msg-text')
+//                 const typingIndicator = item.querySelector('.typing-indicator')
+//                 // Показываем индикатор набора перед последним сообщением
+//                 if (index === chatItems.length - 2) {
+//                     setTimeout(() => {
+//                         chatLoop.classList.add('visible');
+//                     }, 0);
+//                 }
+//                 if(text) {
+//                     setTimeout(() => {
+//                         text.style.display = 'flex'
+//                         typingIndicator.style.display = 'none'
+//                     }, 1000)
+//                 }
+//             }, index * 1500);
+//         });
+//     }
+
+//     // Проверка видимости блока при скролле
+//     function checkVisibility() {
+//         if (animationStarted || scrollLocked) return;
+//         console.log();
+//         const rect = chatSection.getBoundingClientRect();
+//         const isVisible = (
+//             rect.top <= (window.innerHeight * 0.75) && 
+//             rect.bottom >= (window.innerHeight * 0.25)
+//         );
+
+//         if (isVisible) {
+//             setTimeout(()=> {
+//                 showMessages();
+//                 window.removeEventListener('scroll', checkVisibility);
+//             }, 1000)
+//         }
+//     }
+
+//     // Обработчик скролла
+//     window.addEventListener('scroll', checkVisibility);
+    
+//     // Проверить сразу при загрузке (если блок уже в зоне видимости)
+//     checkVisibility();
+// });
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const chatSection = document.querySelector('.chat');
     const chatItems = document.querySelectorAll('.chat__item');
     const chatLoop = document.querySelector('.chat__loop');
     let animationStarted = false;
     let scrollLocked = false;
+
+    // Функция для эффекта печатающегося текста
+    function typeWriter(element, text, speed) {
+        let i = 0;
+        element.textContent = ''; // Очищаем текст перед началом печати
+        element.style.display = 'flex'; // Показываем элемент
+        
+        function typing() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(typing, speed);
+            }
+        }
+        
+        typing();
+    }
 
     // Функция для показа сообщений
     function showMessages() {
@@ -195,28 +270,31 @@ document.addEventListener('DOMContentLoaded', function() {
         chatItems.forEach((item, index) => {
             setTimeout(() => {
                 item.classList.add('visible');
-                const text = item.querySelector('.msg-text')
-                const typingIndicator = item.querySelector('.typing-indicator')
+                const textElement = item.querySelector('.msg-text');
+                const typingIndicator = item.querySelector('.typing-indicator');
+                
                 // Показываем индикатор набора перед последним сообщением
                 if (index === chatItems.length - 2) {
                     setTimeout(() => {
                         chatLoop.classList.add('visible');
                     }, 0);
                 }
-                if(text) {
+                
+                if(textElement) {
                     setTimeout(() => {
-                        text.style.display = 'flex'
-                        typingIndicator.style.display = 'none'
-                    }, 1000)
+                        // Получаем текст из атрибута data-text или из содержимого элемента
+                        const textToType = textElement.dataset.text || textElement.textContent;
+                        typingIndicator.style.display = 'none';
+                        typeWriter(textElement, textToType, 50); // 50ms задержка между символами
+                    }, 1000);
                 }
-            }, index * 1500);
+            }, index * 2000);
         });
     }
 
     // Проверка видимости блока при скролле
     function checkVisibility() {
         if (animationStarted || scrollLocked) return;
-        console.log();
         const rect = chatSection.getBoundingClientRect();
         const isVisible = (
             rect.top <= (window.innerHeight * 0.75) && 
@@ -227,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(()=> {
                 showMessages();
                 window.removeEventListener('scroll', checkVisibility);
-            }, 1000)
+            }, 1000);
         }
     }
 
@@ -237,5 +315,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Проверить сразу при загрузке (если блок уже в зоне видимости)
     checkVisibility();
 });
-
-
