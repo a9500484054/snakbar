@@ -97,6 +97,7 @@
         @media (min-width: $screen-table) {
             &:nth-child(1) {
                 order: 1;
+                margin-bottom: 52px;
             }
             &:nth-child(2) {
                 order: 2;
@@ -125,9 +126,10 @@
                 margin-right: 4px;
             }
             .msg-text {
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px !important;
+                border-top-right-radius: 10px !important;
+                border-bottom-right-radius: 10px !important;
+                border-bottom-left-radius: 0 !important;
                 background: #E6E6E6;
                 color: #000000;
             }

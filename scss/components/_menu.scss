@@ -73,6 +73,7 @@
         }
         &:hover > .menu__card {
             display: block;
+            border-radius: 25px;
         }
         @media (min-width: $screen-desktop) {
             &:nth-child(1) {

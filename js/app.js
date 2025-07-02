@@ -80,48 +80,6 @@ const heroSwipers = document.querySelectorAll('.pack-swiper').forEach(swiper => 
     });
 });
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const menuItems = document.querySelectorAll('.menu__item');
-//     const menuList = document.querySelector('.menu__list');
-    
-//     // Проверяем, является ли экран десктопным
-//     function isDesktop() {
-//         return window.matchMedia(`(min-width: 998px`).matches;
-//     }
-    
-//     menuItems.forEach(item => {
-//         item.addEventListener('click', function() {
-//             if (!isDesktop()) return;
-            
-//             // Если элемент уже expanded, сворачиваем его
-//             if (this.classList.contains('expanded')) {
-//                 this.classList.remove('expanded');
-//                 menuList.classList.remove('expanded');
-//                 return;
-//             }
-            
-//             // Сворачиваем все другие expanded элементы
-//             document.querySelectorAll('.menu__item.expanded').forEach(expandedItem => {
-//                 expandedItem.classList.remove('expanded');
-//             });
-            
-//             // Разворачиваем текущий элемент
-//             this.classList.add('expanded');
-//             menuList.classList.add('expanded');
-//         });
-//     });
-    
-//     // Сворачиваем expanded элементы при изменении размера окна
-//     window.addEventListener('resize', function() {
-//         if (!isDesktop()) {
-//             document.querySelectorAll('.menu__item.expanded').forEach(item => {
-//                 item.classList.remove('expanded');
-//             });
-//             menuList.classList.remove('expanded');
-//         }
-//     });
-// });
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuItems = document.querySelectorAll('.menu__item');
@@ -152,8 +110,6 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('mouseleave', function() {
             if (!isDesktop()) return;
             
-            // Можно оставить элемент развернутым до наведения на другой
-            // Или добавить задержку перед сворачиванием
         });
     });
     
@@ -187,53 +143,6 @@ window.addEventListener('load', function() {
 });
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const chatItems = document.querySelectorAll('.chat__item');
-//     const chatLoop = document.querySelector('.chat__loop');
-    
-//     // Функция для последовательного показа сообщений
-//     function showMessages() {
-//         chatItems.forEach((item, index) => {
-//             setTimeout(() => {
-//                 item.classList.add('visible');
-                
-//                 // Показываем индикатор набора сообщения перед последним сообщением
-//                 if (index === chatItems.length - 2) {
-//                     setTimeout(() => {
-//                         chatLoop.classList.add('visible');
-//                                     // setTimeout(() => {
-//                                     //     chatLoop.classList.remove('visible');
-//                                     // }, 1000);
-//                     }, 500);
-//                 }
-//             }, index * 2000); // Задержка между сообщениями - 2 секунды
-//         });
-//     }
-    
-//     // Запускаем анимацию через небольшую задержку после загрузки страницы
-//     setTimeout(showMessages, 1000);
-    
-//     // Для демонстрации можно добавить кнопку перезапуска
-//     const restartBtn = document.createElement('button');
-//     restartBtn.textContent = 'Повторить переписку';
-//     restartBtn.style.marginTop = '20px';
-//     restartBtn.style.padding = '10px 20px';
-//     restartBtn.style.backgroundColor = '#4CAF50';
-//     restartBtn.style.color = 'white';
-//     restartBtn.style.border = 'none';
-//     restartBtn.style.borderRadius = '5px';
-//     restartBtn.style.cursor = 'pointer';
-    
-//     restartBtn.addEventListener('click', function() {
-//         chatItems.forEach(item => item.classList.remove('visible'));
-//         chatLoop.classList.remove('visible');
-//         showMessages();
-//     });
-    
-//     document.querySelector('.container').appendChild(restartBtn);
-// });
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const chatSection = document.querySelector('.chat');
@@ -242,26 +151,10 @@ document.addEventListener('DOMContentLoaded', function() {
     let animationStarted = false;
     let scrollLocked = false;
 
-    // Функция для блокировки скролла
-    function lockScroll() {
-        scrollLocked = true;
-        document.body.style.overflow = 'hidden';
-        document.body.style.touchAction = 'none';
-    }
-
-    // Функция для разблокировки скролла
-    function unlockScroll() {
-        scrollLocked = false;
-        document.body.style.overflow = '';
-        document.body.style.touchAction = '';
-    }
-
     // Функция для показа сообщений
     function showMessages() {
         if (animationStarted) return;
         animationStarted = true;
-        // lockScroll();
-
         chatItems.forEach((item, index) => {
             setTimeout(() => {
                 item.classList.add('visible');
@@ -270,15 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (index === chatItems.length - 2) {
                     setTimeout(() => {
                         chatLoop.classList.add('visible');
-                        // setTimeout(() => {
-                        //     chatLoop.classList.remove('visible');
-                        // }, 1000);
                     }, 500);
-                }
-
-                // Разблокируем скролл после последнего сообщения
-                if (index === chatItems.length - 1) {
-                    // setTimeout(unlockScroll, 1000);
                 }
             }, index * 2000);
         });

@@ -864,6 +864,7 @@ input[type=radio].visually-hidden {
 @media (min-width: 768px) {
   .chat__item:nth-child(1) {
     order: 1;
+    margin-bottom: 52px;
   }
   .chat__item:nth-child(2) {
     order: 2;
@@ -890,9 +891,10 @@ input[type=radio].visually-hidden {
   margin-right: 4px;
 }
 .chat__message-client .msg-text {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 0 !important;
   background: #E6E6E6;
   color: #000000;
 }
@@ -1144,6 +1146,7 @@ input[type=radio].visually-hidden {
 }
 .menu__item:hover > .menu__card {
   display: block;
+  border-radius: 25px;
 }
 @media (min-width: 998px) {
   .menu__item {
