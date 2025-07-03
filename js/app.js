@@ -380,9 +380,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Функция, которая будет вызываться при скролле
   function handleScroll() {
     // Удаляем класс у всех элементов
-    elements.forEach(element => {
-      element.classList.remove('expanded--mob');
-    });
+    setTimeout(()=> {
+        elements.forEach(element => {
+          element.classList.remove('expanded--mob');
+        });
+    }, 4000)
     
     // Удаляем обработчик события после срабатывания
     window.removeEventListener('scroll', handleScroll);
