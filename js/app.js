@@ -69,22 +69,27 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// const heroSwipers = document.querySelectorAll('.pack-swiper').forEach(swiper => {
-//     new Swiper(swiper, {
-//         speed: 1000,
-//         loop: true, // Добавьте этот параметр для бесконечной прокрутки
-//         autoplay: {
-//             delay: 3000,
-//             disableOnInteraction: false,
-//         },
-//     });
-// });
-
-
 document.addEventListener('DOMContentLoaded', () => {
+    // Хранилище для экземпляров Swiper
+    const swiperInstances = new Map();
+    
+    // Настройки для Intersection Observer
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.7
+    };
+
     // Функция для инициализации Swiper
     function initSwiper(element) {
-        return new Swiper(element, {
+        if (swiperInstances.has(element)) {
+            // Если Swiper уже существует, просто включаем его
+            const swiper = swiperInstances.get(element);
+            swiper.autoplay.start();
+            return swiper;
+        }
+        
+        const swiper = new Swiper(element, {
             speed: 1000,
             loop: true,
             autoplay: {
@@ -92,31 +97,82 @@ document.addEventListener('DOMContentLoaded', () => {
                 disableOnInteraction: false,
             },
         });
+        
+        swiperInstances.set(element, swiper);
+        return swiper;
     }
 
-    // Настройки для Intersection Observer
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.7 // Слайдер инициализируется когда 10% его площади видно
-    };
+    // Функция для остановки Swiper
+    function stopSwiper(element) {
+        if (swiperInstances.has(element)) {
+            const swiper = swiperInstances.get(element);
+            swiper.autoplay.stop();
+        }
+    }
 
     // Создаем Observer
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
+            const swiperElement = entry.target;
+            
             if (entry.isIntersecting) {
-                const swiperElement = entry.target;
+                // Останавливаем все другие свайперы
+                document.querySelectorAll('.pack-swiper').forEach(el => {
+                    if (el !== swiperElement) stopSwiper(el);
+                });
+                
+                // Запускаем текущий свайпер
                 initSwiper(swiperElement);
-                observer.unobserve(swiperElement); // Прекращаем наблюдение после инициализации
+            } else {
+                // Останавливаем этот свайпер, если он больше не виден
+                stopSwiper(swiperElement);
             }
         });
     }, observerOptions);
 
-    // Находим все элементы слайдеров и начинаем наблюдать за ними
+    // Начинаем наблюдать за всеми слайдерами
     document.querySelectorAll('.pack-swiper').forEach(swiper => {
         observer.observe(swiper);
     });
 });
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     // Функция для инициализации Swiper
+//     function initSwiper(element) {
+//         return new Swiper(element, {
+//             speed: 1000,
+//             loop: true,
+//             autoplay: {
+//                 delay: 2000,
+//                 disableOnInteraction: false,
+//             },
+//         });
+//     }
+
+//     // Настройки для Intersection Observer
+//     const observerOptions = {
+//         root: null,
+//         rootMargin: '0px',
+//         threshold: 0.7 // Слайдер инициализируется когда 10% его площади видно
+//     };
+
+//     // Создаем Observer
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 const swiperElement = entry.target;
+//                 initSwiper(swiperElement);
+//                 observer.unobserve(swiperElement); // Прекращаем наблюдение после инициализации
+//             }
+//         });
+//     }, observerOptions);
+
+//     // Находим все элементы слайдеров и начинаем наблюдать за ними
+//     document.querySelectorAll('.pack-swiper').forEach(swiper => {
+//         observer.observe(swiper);
+//     });
+// });
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuItems = document.querySelectorAll('.menu__item');
@@ -314,4 +370,24 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Проверить сразу при загрузке (если блок уже в зоне видимости)
     checkVisibility();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Получаем элемент(ы), у которого нужно удалить класс
+  const elements = document.querySelectorAll('.expanded--mob');
+  
+  // Функция, которая будет вызываться при скролле
+  function handleScroll() {
+    // Удаляем класс у всех элементов
+    elements.forEach(element => {
+      element.classList.remove('expanded--mob');
+    });
+    
+    // Удаляем обработчик события после срабатывания
+    window.removeEventListener('scroll', handleScroll);
+  }
+  
+  // Добавляем обработчик события скролла
+  window.addEventListener('scroll', handleScroll);
 });
