@@ -117,6 +117,12 @@
             }
 
         }
+        @media (max-width: $screen-table) {
+        &:nth-child(4) {
+            position: relative;
+            top: 32px;
+        }
+        }
     }
     &__message {
         display: flex;

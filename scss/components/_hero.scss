@@ -61,12 +61,12 @@
     }
 
     &__packs {
+        position: relative;
         margin-bottom: 12px;
-        width: 100%;
-        @media (min-width: $screen-table) {
-            position: relative;
-            left: 50%;
-            transform: translate(-47%, 0);
+        width: 110%;
+        transform: translate(-50%, 0);
+        left: 50%;
+        @media (min-width: $screen-table) {       
             width: 115%;
         }
         @media (min-width: $screen-desktop) {
